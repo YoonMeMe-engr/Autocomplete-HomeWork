@@ -1,4 +1,4 @@
-const products = [
+const products = [ //fakestorapi.com ကနေ Products Data တွေ ယူထားတာ fakestorapi.com က JSON format ကို convertersimple.com ကနေ JS Object ကို ပြောင်းထားတာ
     {
       id: 1,
       title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",

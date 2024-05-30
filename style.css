@@ -1,5 +1,7 @@
 body {
     background-color: green;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
@@ -41,6 +43,14 @@ body {
     width: 8%;
 }
 
-.enterProductItem {
+.showSomething {
     display: none;
+}
+
+.img {
+    width: 800px;
+    height: 400px;
+    margin-top: 50px;
+    margin-left: 280px;
+    margin-bottom: 10px;
 }

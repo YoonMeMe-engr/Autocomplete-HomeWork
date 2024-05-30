@@ -190,6 +190,7 @@ const products = [ //fakestorapi.com ကနေ Products Data တွေ ယူထ
 const autoCompleteTag = document.getElementsByClassName("autoComplete")[0];
 const resultContainerTag = document.getElementsByClassName("resultContainer")[0];
 let filterProducts = [];
+const showSomethingTag = document.querySelector(".showSomething");
 
 autoCompleteTag.addEventListener("keyup" , (event) => {
   if (
@@ -263,24 +264,24 @@ const navigateAndSelectProduct = (key) => {
   } else {
     const productItemContainerToSelect = selectProducts(indexToShow);
     productItemContainerToSelect.classList.add("selected");
-    selectEnter = true;
-    const enterProduct = selectProducts(indexToShow);
-    const enterProductItem = document.createElement("div");
-    enterProductItem.classList.add("enterProductItem");
-    enterProductItem.append(enterProduct);
-    enterProductList();
+    enter = true;
+    enterProductLists();
   }
 };
 
-let selectEnter = false;
-const enterProductList = ("enter" , () => {
-  if (selectEnter === true) {
-    deselectProducts();
-    resultContainerTag.deselectProducts.style.display = "none";
-    enterProductItem.style.display = "inline";
+let enter = false;
+const enterProductLists = ("enter" , () => {
+  const showSomethingItem = document.createElement("div");
+  showSomethingItem.classList.add("showItem");
+  showSomethingTag.append(showSomethingItem);
+  
+  if (enter === true) {
+    resultContainerTag.style.display = "none";
+    showSomethingTag.style.display = "inline";
   } else {
-    resultContainerTag.deselectProducts.style.display = "inline";
-    enterProductItem.style.display = "none";
+    resultContainerTag.style.display = "inline";
+    showSomethingTag.style.display = "none";
+    showSomethingTag.innerHTML = "";
   }
 });
 
